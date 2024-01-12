@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -11,76 +11,43 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  overflow: hidden;
+  background: #252839;
 }
 
 ul {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
-ul li {
+li {
+  position: relative;
   list-style: none;
-  text-align: center;
 }
 
 a {
-  color: #333;
+  position: relative;
+  font-size: 4em;
   text-decoration: none;
-  font-size: 3em;
-  padding: 5px 20px;
-  display: inline-flex;
-  font-weight: 700;
-  transition: 0.5s;
-}
-
-ul:hover a {
-  color: #0002;
-}
-
-ul li a:hover {
-  color: #000;
-  background: #fff;
+  letter-spacing: 2px;
+  line-height: 1em;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
 }
 
 a:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 5em;
-  z-index: -1;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 500px;
-  opacity: 0;
-  transition: letter-spacing 0.5s;
-  width: 100vw;
-  height: 100vh;
-}
-a:hover:before {
   content: attr(data-text);
-  opacity: 1;
-  letter-spacing: 10px;
+  position: absolute;
+  color: #00ade1;
+  border-right: 8px solid #00ade1;
+  -webkit-text-stroke: 1px #00ade1;
+  width: 0%;
+  overflow: hidden;
+  transition: 1s;
 }
 
-li:nth-child(1) a:before {
-  background: #81ecec;
-}
-
-ul li:nth-child(2) a:before {
-  background: #ff7675;
-}
-ul li:nth-child(3) a:before {
-  background: #55efc4;
-}
-ul li:nth-child(4) a:before {
-  background: #a29bfe;
-}
-ul li:nth-child(5) a:before {
-  background: #fd79a8;
+a:hover:before {
+  width: 100%;
 }
